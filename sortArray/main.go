@@ -17,15 +17,14 @@ func main() {
 		fmt.Scanln(&array[i])
 	}
 
-
 	fmt.Println("enterd array is: ", array)
 
 	// sort.Ints(array)
-
-	for i:=0;i<limit;i++{
-		for j:=0;j<limit;j++{
-			if array[i]>array[j]{
-				array[i],array[j]=array[j],array[i]
+	
+	for i := 0; i < limit; i++ {
+		for j := 0; j < limit; j++ {
+			if array[i] < array[j] {
+				array[i], array[j] = array[j], array[i]
 			}
 		}
 
@@ -37,5 +36,5 @@ func main() {
 	// 	array[i],array[j]=array[j],array[i]
 	// }
 	// fmt.Println("descending order of array: ", array)
-
+	
 }

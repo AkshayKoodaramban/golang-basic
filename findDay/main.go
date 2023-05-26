@@ -1,15 +1,13 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
 	var day int
 	fmt.Println("enter number between 1-7 to Find your lucky day")
 	fmt.Scanf("%d", &day)
-	
-	switch day{
+
+	switch day {
 	case 1:
 		fmt.Println("Sunday")
 	case 2:
@@ -28,5 +26,5 @@ func main() {
 		fmt.Println("Invalid Data")
 
 	}
-	
+
 }

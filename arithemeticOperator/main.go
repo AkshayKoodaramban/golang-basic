@@ -11,7 +11,7 @@ func subtraction(a, b int) int {
 func multiplication(a, b int) int {
 	return a * b
 }
-func division(a, b int) float64 {
+func division(a, b float64) float64 {
 	if b != 0 {
 		return float64(a / b)
 	} else {
@@ -28,25 +28,30 @@ func main() {
 	var num int
 	fmt.Println("enter your action")
 	fmt.Scanln(&num)
-	fmt.Println("enter your first value")
-	fmt.Scanln(&num1)
-	fmt.Println("enter your second value")
-	fmt.Scanln(&num2)
-	switch num {
-	case 1:
-		result:= addition(num1,num2)
-		fmt.Println("result = ",result)	
-	case 2:
-		result:= subtraction(num1,num2)
-		fmt.Println("result = ",result)	
-	case 3:
-		result:= multiplication(num1,num2)
-		fmt.Println("result = ",result)	
-	case 4:
-		result:= division(num1,num2)
-		fmt.Println("result = ",result)	
-	default:
-		fmt.Println("Invalid data")	
+
+	if num > 0 && num < 5 {
+		fmt.Println("enter your first value")
+		fmt.Scanln(&num1)
+		fmt.Println("enter your second value")
+		fmt.Scanln(&num2)
+		switch num {
+		case 1:
+			result := addition(num1, num2)
+			fmt.Println("result = ", result)
+		case 2:
+			result := subtraction(num1, num2)
+			fmt.Println("result = ", result)
+		case 3:
+			result := multiplication(num1, num2)
+			fmt.Println("result = ", result)
+		case 4:
+			result := division(float64(num1), float64(num2))
+			fmt.Println("result = ", result)
+		default:
+			fmt.Println("Invalid data")
+		}
+	} else {
+		fmt.Println("Invalid data")
 	}
 
 }
